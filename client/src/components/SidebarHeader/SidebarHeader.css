@@ -25,3 +25,7 @@
   background: transparent;
   outline-width: 0;
 }
+
+.sidebar_inputButton:hover {
+  color: rgb(35, 35, 233);
+}

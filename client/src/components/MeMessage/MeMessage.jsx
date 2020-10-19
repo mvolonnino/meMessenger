@@ -1,14 +1,14 @@
 import React from "react";
 
-import "./IMessage.css";
+import "./MeMessage.css";
 
 // sidebar
 import Sidebar from "../Sidebar/Sidebar";
 import Chat from "../Chat/Chat";
 
-function IMessage() {
+function MeMessage() {
   return (
-    <div className="imessage">
+    <div className="meMessage">
       {/* sidebar */}
       <Sidebar />
       {/* chat */}
@@ -17,4 +17,4 @@ function IMessage() {
   );
 }
 
-export default IMessage;
+export default MeMessage;
