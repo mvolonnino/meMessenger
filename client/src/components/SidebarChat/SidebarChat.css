@@ -17,3 +17,8 @@
   top: 5px;
   right: 0;
 }
+
+.sidebar_chat:hover {
+  background-color: rgb(35, 35, 233);
+  color: white;
+}

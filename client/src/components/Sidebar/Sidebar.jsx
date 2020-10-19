@@ -1,16 +1,30 @@
 import React from "react";
 
 import "./Sidebar.css";
-import Header from "../Header/Header";
-import Sidechats from "../Sidechats/Sidechats";
+
+import SidebarChat from "../SidebarChat/SidebarChat";
+import SidebarHeader from "../SidebarHeader/SidebarHeader";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      {/* header */}
-      <Header />
-      {/* side chats */}
-      <Sidechats />
+      {/* sidebar header */}
+      <SidebarHeader />
+      {/* sidebar chats */}
+      <div className="sidebar_chats">
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+      </div>
     </div>
   );
 }

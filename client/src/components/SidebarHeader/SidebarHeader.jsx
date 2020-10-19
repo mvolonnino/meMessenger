@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Header.css";
+import "./SidebarHeader.css";
 // material-ui
 import IconButton from "@material-ui/core/IconButton";
 
@@ -9,7 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import SearchIcon from "@material-ui/icons/Search";
 import RateReviewOutlinedIcon from "@material-ui/icons/RateReviewOutlined";
 
-function Header() {
+function SidebarHeader() {
   return (
     <div className="sidebar_header">
       <Avatar className="sidebar_avatar" />
@@ -24,4 +24,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SidebarHeader;
