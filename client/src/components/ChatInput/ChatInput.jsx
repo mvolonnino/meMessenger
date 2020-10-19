@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import "./ChatInput.css";
-import SelectInput from "@material-ui/core/Select/SelectInput";
 
 // material-ui
 import IconButton from "@material-ui/core/IconButton";
