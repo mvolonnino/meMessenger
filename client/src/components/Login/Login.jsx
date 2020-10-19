@@ -16,7 +16,7 @@ function Login() {
           alt="imessage logo"
         />
         <h1 className="logo_name">MeMessage!</h1>
-        <small className="muted">An iMessage clone!</small>
+        <small className="muted">an iMessage clone!</small>
       </div>
       <Button onClick={signIn}>Sign In</Button>
     </div>
