@@ -1,0 +1,19 @@
+.sidebar_chat {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.sidebarChat_info {
+  margin-left: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.sidebarChat_info > small {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
