@@ -9,7 +9,7 @@
   object-fit: contain;
 }
 
-.meMessage {
+.logo_name {
   display: grid;
   place-items: center;
 }
