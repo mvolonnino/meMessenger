@@ -29,5 +29,39 @@
   position: absolute;
   font-size: 8px;
   bottom: -5px;
+  order: 0;
+}
+
+.message_sender {
+  margin-left: auto;
+}
+
+.message_sender > .message_photo {
+  order: 1;
+  margin: 15px;
+}
+
+.message_photo {
+  order: 0;
+}
+
+.message_sender > p {
+  background-color: rgb(35, 35, 233);
+  color: white;
+}
+
+.message_sender > .displayName {
+  color: gray;
+  position: absolute;
+  font-size: 8px;
+  bottom: -5px;
+  right: 0;
+}
+
+.message_sender > .timestamp {
+  color: gray;
+  position: absolute;
+  font-size: 8px;
+  bottom: -5px;
   left: 0;
 }
