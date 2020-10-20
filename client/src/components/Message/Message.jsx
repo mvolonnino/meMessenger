@@ -11,7 +11,14 @@ function Message({
     <div className="message">
       <Avatar src={photo} />
       <p>{message}</p>
-      <small>{new Date(timestamp?.toDate()).toLocaleTimeString()}</small>
+      <small>
+        <span className="displayName">{displayName}</span>
+      </small>
+      <small>
+        <span className="timestamp">
+          {new Date(timestamp?.toDate()).toLocaleTimeString()}
+        </span>
+      </small>
     </div>
   );
 }
