@@ -23,6 +23,7 @@ function ChatInput() {
           onChange={(e) => setMessage(e.target.value)}
           type="text"
           placeholder="meMessage"
+          onSubmit={sendMessage}
         />
         <IconButton className="send_button" onClick={sendMessage}>
           <SendIcon />
