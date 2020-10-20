@@ -9,6 +9,8 @@ import SendIcon from "@material-ui/icons/Send";
 
 function ChatInput() {
   const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+
   const sendMessage = (e) => {
     e.preventDefault();
     // firebase logic here

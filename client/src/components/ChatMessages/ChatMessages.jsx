@@ -1,11 +1,12 @@
 import React from "react";
 
 import "./ChatMessages.css";
+import Message from "../Message/Message";
 
 function ChatMessages() {
   return (
     <div className="chat_messages">
-      <h4>I am messages</h4>
+      <Message />
     </div>
   );
 }

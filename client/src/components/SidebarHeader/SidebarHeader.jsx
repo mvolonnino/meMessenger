@@ -10,10 +10,19 @@ import SearchIcon from "@material-ui/icons/Search";
 import RateReviewOutlinedIcon from "@material-ui/icons/RateReviewOutlined";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
-import { auth } from "../../database/firebase";
+import db, { auth } from "../../database/firebase";
 
 function SidebarHeader() {
   const user = useSelector(selectUser);
+
+  const addChat = () => {
+    const chatName = prompt("Please enter a chat name");
+    if (chatName) {
+      db.collection("chats").add({
+        chatName: chatName,
+      });
+    }
+  };
 
   return (
     <div className="sidebar_header">
@@ -26,7 +35,11 @@ function SidebarHeader() {
         <SearchIcon />
         <input placeholder="Search" />
       </div>
-      <IconButton variant="outlined" className="sidebar_inputButton">
+      <IconButton
+        variant="outlined"
+        className="sidebar_inputButton"
+        onClick={addChat}
+      >
         <RateReviewOutlinedIcon />
       </IconButton>
     </div>
