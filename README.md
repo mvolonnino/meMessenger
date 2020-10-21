@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# MeMessenger!
 
-## Available Scripts
+##### an iMessage clone :)
 
-In the project directory, you can run:
+## ABOUT
 
-### `npm start`
+This project is a working clone of the popular iMessage application for desktop. It is a fun way to get people together and talking to anyone they would like.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It allows a user to sign in with Google Authentication and be able to message anyone in any chat channel.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Inspiration came from the widely popular iMessage design with some cool UI changes and important details. The application shows whose signed in the top Sidebar Header. It gives details on who is in the chat channel by a user's email (very easy to change to anything else from Google Auth). A user can create a new channel and name it whatever he or she would like and begin messaging in it. Every user will have access to each chat channel which makes it a fun way to meet new people, especially during the COVID 19 Pandemic, where more and more people are forced to stay indoors.
 
-### `npm test`
+## Cool UI
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- verified user ID in Sibebar Header
+- User sign out function from Sidebar Header Avatar
+- Persistant sign in feature utilizing Google Authentication
+- Cant send message unless a Chat Channel has been selected
+- 3 dots on right side of Chat Header works as 'details" button and shows a list of unique emails in the chat (no duplicate emails) and total # of messages in the Chat Channel
+- Overflow scrolling so page is always the size of the viewport making it feel more like an actual 'Messager App'
 
-### `npm run build`
+## Demo of meMessage!
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![meMessage!](video/demo-meMessage.gif)
+[Click here to try it out](https://memessage-9f0a0.web.app/) - All you need is a Google Account!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## LANGUAGES UTILIZED
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- Redux
+- HTML5
+- CSS
+- Material-UI
+- Timeago.js
+- Animations
+- Firebase Cloud
+- Firebase Authentication
 
-### `npm run eject`
+### Contributing Author(s)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Matt Volonnino :
+- {
+- [GitHub Repository](https://github.com/mvolonnino)
+- [Email](mailto:mvolonnino12@gmail.com)
+- }
