@@ -23,11 +23,12 @@
   color: white;
 }
 
-/* .totalMessages {
-  position: absolute;
-  bottom: -1px;
-  right: 0;
+.totalMessages {
   font-size: small;
-  background-color: #f5f5f5;
-  margin-top: 5px;
-} */
+}
+
+@media (min-width: 940px) {
+  .sidebar_info > small {
+    display: none;
+  }
+}

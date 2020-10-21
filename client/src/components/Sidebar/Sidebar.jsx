@@ -11,14 +11,16 @@ export default function Sidebar() {
   console.log({ chats });
 
   useEffect(() => {
-    db.collection("chats").onSnapshot((snapshot) =>
-      setChats(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          data: doc.data(),
-        }))
-      )
-    );
+    db.collection("chats")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setChats(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
   }, []);
 
   return (

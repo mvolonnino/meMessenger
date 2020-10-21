@@ -5,8 +5,13 @@ import "./SidebarChat.css";
 import { Avatar } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { setChat } from "../../features/chatSlice";
+import * as timeago from "timeago.js";
+import WindowDimensions from "../../utils/WindowDimensions";
+import useWindowDimensions from "../../utils/WindowDimensions";
 
 function SidebarChat({ id, chatName }) {
+  const { height, width } = useWindowDimensions();
+  console.log({ height, width });
   const dispatch = useDispatch();
   const [chatInfo, setChatInfo] = useState([]);
   console.log({ chatInfo });
@@ -20,6 +25,14 @@ function SidebarChat({ id, chatName }) {
         setChatInfo(snapshot.docs.map((doc) => doc.data()))
       );
   }, [id]);
+
+  // if page is loaded on a screen that is less that 940 px, it will not show time but it does not dynamically change
+  const isSmall = width < 940;
+  const showTime = isSmall ? (
+    <></>
+  ) : (
+    timeago.format(new Date(chatInfo[0]?.timestamp?.toDate()))
+  );
 
   return (
     <div className="sidebar_chat">
@@ -35,12 +48,10 @@ function SidebarChat({ id, chatName }) {
         }
         className="sidebarChat_info"
       >
-        <h3>{chatName}</h3>
+        <h3>{chatName.split(" ").join(" ", 3)}</h3>
         <p>{`${chatInfo[0]?.message.split(" ", 4).join(" ")} ...`}</p>
         <span className="totalMessages">{`${chatInfo?.length} messages`}</span>
-        <small>
-          {new Date(chatInfo[0]?.timestamp?.toDate()).toLocaleString()}
-        </small>
+        <small>{showTime}</small>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import RateReviewOutlinedIcon from "@material-ui/icons/RateReviewOutlined";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
 import db, { auth } from "../../database/firebase";
+import firebase from "firebase";
 
 function SidebarHeader() {
   const user = useSelector(selectUser);
@@ -20,6 +21,7 @@ function SidebarHeader() {
     if (chatName) {
       db.collection("chats").add({
         chatName: chatName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
     }
   };
