@@ -6,7 +6,6 @@ import { Avatar } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { setChat } from "../../features/chatSlice";
 import * as timeago from "timeago.js";
-import WindowDimensions from "../../utils/WindowDimensions";
 import useWindowDimensions from "../../utils/WindowDimensions";
 
 function SidebarChat({ id, chatName }) {
