@@ -12,7 +12,6 @@ function Chat() {
       <ChatHeader />
       {/* chat messages*/}
       <ChatMessages />
-
       {/* chat input */}
       <ChatInput />
     </div>

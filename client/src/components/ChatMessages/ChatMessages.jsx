@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import "./ChatMessages.css";
 import Message from "../Message/Message";
 import { useSelector } from "react-redux";
 import { selectChatId } from "../../features/chatSlice";
 import db from "../../database/firebase";
+import FlipMove from "react-flip-move";
 
 function ChatMessages() {
   const chatId = useSelector(selectChatId);
@@ -30,9 +31,12 @@ function ChatMessages() {
 
   return (
     <div className="chat_messages">
-      {messages.map(({ id, data }) => (
-        <Message key={id} contents={data} />
-      ))}
+      <FlipMove>
+        {messages.map(({ id, data }) => (
+          <Message key={id} contents={data} />
+        ))}
+      </FlipMove>
+      {/* <div ref="endMessage"></div> */}
     </div>
   );
 }

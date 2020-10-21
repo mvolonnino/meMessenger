@@ -14,7 +14,6 @@ import SendIcon from "@material-ui/icons/Send";
 
 function ChatInput() {
   const [message, setMessage] = useState("");
-  console.log({ message });
   const user = useSelector(selectUser);
   const chatId = useSelector(selectChatId);
 
