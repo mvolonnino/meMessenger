@@ -22,6 +22,7 @@ Inspiration came from the widely popular iMessage design with some cool UI chang
 ## Demo of meMessage!
 
 ![meMessage!](video/demo-meMessage.gif)
+
 [Click here to try it out](https://memessage-9f0a0.web.app/) - All you need is a Google Account!
 
 ## LANGUAGES UTILIZED
