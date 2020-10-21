@@ -48,7 +48,7 @@ function SidebarChat({ id, chatName }) {
         className="sidebarChat_info"
       >
         <h3>{chatName.split(" ").join(" ", 3)}</h3>
-        <p>{`${chatInfo[0]?.message.split(" ", 4).join(" ")} ...`}</p>
+        <p>{`${chatInfo[0]?.message.split(" ", 6).join(" ")} ...`}</p>
         <span className="totalMessages">{`${chatInfo?.length} messages`}</span>
         <small>{showTime}</small>
       </div>

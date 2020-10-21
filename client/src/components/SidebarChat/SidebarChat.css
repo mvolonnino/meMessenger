@@ -26,9 +26,3 @@
 .totalMessages {
   font-size: small;
 }
-
-@media (min-width: 940px) {
-  .sidebar_info > small {
-    display: none;
-  }
-}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./ChatMessages.css";
 import Message from "../Message/Message";
@@ -17,7 +17,7 @@ function ChatMessages() {
       db.collection("chats")
         .doc(chatId)
         .collection("messages")
-        .orderBy("timestamp", "asc")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) =>
           setMessages(
             snapshot.docs.map((doc) => ({
@@ -36,7 +36,6 @@ function ChatMessages() {
           <Message key={id} contents={data} />
         ))}
       </FlipMove>
-      {/* <div ref="endMessage"></div> */}
     </div>
   );
 }

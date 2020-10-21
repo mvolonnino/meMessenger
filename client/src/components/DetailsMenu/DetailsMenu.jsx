@@ -12,21 +12,20 @@ const ITEM_HEIGHT = 48;
 
 export default function DetailsMenu() {
   const [chatInfo, setChatInfo] = useState([]);
+  console.log("detailsmenu", { chatInfo });
   const chatId = useSelector(selectChatId);
   let uniqueEmails = [];
 
   useEffect(() => {
-    {
-      chatId &&
-        db
-          .collection("chats")
-          .doc(chatId)
-          .collection("messages")
-          .orderBy("timestamp", "desc")
-          .onSnapshot((snapshot) =>
-            setChatInfo(snapshot.docs.map((doc) => doc.data()))
-          );
-    }
+    chatId &&
+      db
+        .collection("chats")
+        .doc(chatId)
+        .collection("messages")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) =>
+          setChatInfo(snapshot.docs.map((doc) => doc.data()))
+        );
   }, [chatId]);
 
   if (chatId) {
@@ -86,6 +85,7 @@ export default function DetailsMenu() {
                 {email}
               </MenuItem>
             ))}
+            <MenuItem className="totalMessages">{`${chatInfo?.length} messages`}</MenuItem>
           </Menu>
         </>
       )}

@@ -1,3 +1,8 @@
 .details_button:hover {
   color: blue;
 }
+
+.totalMessages {
+  border-top: 1px solid lightgray !important;
+  font-size: small !important;
+}

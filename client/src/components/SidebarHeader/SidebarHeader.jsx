@@ -6,7 +6,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 // material-ui icons
 import Avatar from "@material-ui/core/Avatar";
-import SearchIcon from "@material-ui/icons/Search";
+import UserIcon from "@material-ui/icons/VerifiedUser";
 import RateReviewOutlinedIcon from "@material-ui/icons/RateReviewOutlined";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
@@ -34,8 +34,8 @@ function SidebarHeader() {
         onClick={() => auth.signOut()}
       />
       <div className="sidebar_input">
-        <SearchIcon />
-        <input placeholder="Search" />
+        <UserIcon />
+        <p>User Signed in: {user.email}</p>
       </div>
       <IconButton
         variant="outlined"
